@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="stylesheets/colleges.css"/>
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="stylesheets/general.css"/>
+
+</head>
+<body>
+  <%
+    String checkedCollege = (String) request.getSession(true).getAttribute("College");
+    String name =           (String) request.getSession(true).getAttribute("StudentName");
+    String year =           (String) request.getSession(true).getAttribute("Year");
+    String checkedIn =           (String) request.getSession(true).getAttribute("Checkedin");
+
+  %>
+  <div id = "logo" onclick="location.href='collegeview.jsp';">
+    <p class="headerText" id="headerName">Name: <%=name%></p>
+    <p class="headerText" id="headerYear">Class: <%=year%></p>
+    <p class="headerText" id="headercheck">Checked In: <%=checkedIn%></p>
+
+
+
+  </div>
+</body>
+</html>

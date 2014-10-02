@@ -1,0 +1,53 @@
+
+/*Animation effects for collegeview
+============================================================================== */
+
+nav a {
+  text-align: center;
+  font-family: 'Oswald';
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  outline: none;
+  color: #0F4D92;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 1.5em;
+}
+
+#container{
+  margin: 5em auto;
+  text-align: center;
+  width: 100%;
+}
+.animated a {
+  padding: 0 0 10px;
+  height: 4em;
+}
+
+.animated a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #0F4D92;
+  content: '';
+  opacity: 0;
+  -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.animated a:hover::after,
+.animated a:focus::after {
+  height: 3px;
+  opacity: 1;
+  -webkit-transform: translateY(-2.5em);
+  -moz-transform: translateY(-2.5em);
+  transform: translateY(-2.5em);
+}
